@@ -1,0 +1,134 @@
+/*INTRO SECTION*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.intro-section{
+	height: 100%;
+	width: 100%;
+}
+.intro-section-container{
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	transform: translate(0, -50%);
+}
+.intro-section-container h1{
+	font-size: 2rem;
+	font-family: 'Oswald', sans-serif;
+}
+
+.intro-section-container h1 span{
+	transition: 0.2s ease all;
+	margin: -12px;
+	padding: 10px;
+	bottom: 0px;
+	position: relative;
+}
+.intro-section-container h1 span:hover{
+	color: purple;
+	bottom: 10px;
+}
+
+.intro-section-container a{
+	font-size: 1.5rem;
+	color: purple;
+	text-decoration: none;
+	border: 3px solid purple;
+	border-radius: 3px;
+	padding: 5px 20px ;
+	transition: 0.3s ease all;
+	position: relative;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
+
+.intro-section-container a:hover{
+	color: white;
+
+}
+.overlay{
+	position: absolute;
+	background-color: purple;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: 0.3s ease all;
+	z-index: -1;
+}
+.intro-section-container a:hover .overlay{
+	width: 100%;
+}
+/*END OF INTRO SECTION*/
+
+/*ABOUT SECTION*/
+.about-section {
+	height: 100%;
+	width: 100%;
+	background-color: purple;
+	color: white;
+	overflow: hidden;
+	position: relative;
+}
+
+.about-section h1{
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 3rem;
+	margin: 10px;
+}
+
+.about-section p{
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.about-section a{
+	font-size: 1rem;
+	color: white;
+	text-decoration: none;
+	background: none;
+	border: 2px solid white;
+	border-radius: 3px;
+	padding: 5px 20px ;
+	transition: 0.3s ease all;
+	position: absolute;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	z-index: 1;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.about-section a:hover{
+	color: purple;
+}
+
+.overlay-2{
+	position: absolute;
+	background-color: white;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: 0.3s ease all;
+	z-index: -1;
+}
+.about-section a:hover .overlay-2{
+	width: 100%;
+}
+
+img{
+	height: 50%;
+	width: 50%;
+}
+#svg-bot{
+	position: absolute;
+	bottom: -10%;
+}
+
+/*END OF ABOUT SECTION*/
+
+
