@@ -1,9 +1,31 @@
-/*INTRO SECTION*/
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
+
+ h1{
+	font-size: 2rem;
+	font-family: 'Oswald', sans-serif;
+}
+
+h1 span{
+	transition: 0.2s ease all;
+	margin: -12px;
+	padding: 10px;
+	bottom: 0px;
+	position: relative;
+}
+h1 span:hover{
+	color: purple;
+	bottom: 10px;
+}
+
+
+
+
+
+/*INTRO SECTION*/
 .intro-section{
 	height: 100%;
 	width: 100%;
@@ -13,22 +35,6 @@ html, body {
 	top: 50%;
 	left: 20%;
 	transform: translate(0, -50%);
-}
-.intro-section-container h1{
-	font-size: 2rem;
-	font-family: 'Oswald', sans-serif;
-}
-
-.intro-section-container h1 span{
-	transition: 0.2s ease all;
-	margin: -12px;
-	padding: 10px;
-	bottom: 0px;
-	position: relative;
-}
-.intro-section-container h1 span:hover{
-	color: purple;
-	bottom: 10px;
 }
 
 .intro-section-container a{
@@ -63,11 +69,16 @@ html, body {
 }
 /*END OF INTRO SECTION*/
 
+
+
+
+
+
 /*ABOUT SECTION*/
 .about-section {
 	height: 100%;
 	width: 100%;
-	background-color: purple;
+	background-color: #5c17ff;
 	color: white;
 	overflow: hidden;
 	position: relative;
@@ -120,15 +131,90 @@ html, body {
 	width: 100%;
 }
 
-img{
-	height: 50%;
-	width: 50%;
-}
 #svg-bot{
 	position: absolute;
 	bottom: -10%;
 }
-
 /*END OF ABOUT SECTION*/
+
+
+
+
+
+/*PROJECTS SECTION*/
+.projects-section{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+.projects-section h1{
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 3rem;
+	margin: 10px;
+}
+.project-container{
+	margin-top: 50px; 
+	width: 80%;
+	height: 60%;
+	background: url("./images/maze_solver");
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 5px;
+}
+.project-overlay{
+	height: 0;
+	width: 100%;
+	background-color: #5c17ff;
+	color: white;
+	transition: 0.3s ease all;
+	opacity: 0;
+	border-radius: 5px;
+
+}
+.project-container:hover .project-overlay{
+	height: 100%;
+	opacity: 1;
+}
+
+.project-overlay a{
+	font-size: 1.5rem;
+	color: white;
+	text-decoration: none;
+	border: 3px solid white;
+	border-radius: 3px;
+	padding: 5px 20px ;
+	transition: 0.3s ease all;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.project-overlay a:hover{
+	color: purple;
+
+}
+
+.overlay-3{
+	position: absolute;
+	background-color: white;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: 0.3s ease all;
+	z-index: -1;
+}
+.project-overlay a:hover .overlay-3{
+	width: 100%;
+}
+
+
+
+/*END OF PROJECTS SECTIONS*/
 
 
