@@ -21,6 +21,13 @@ h1 span:hover{
 	bottom: 10px;
 }
 
+p{
+font-family: 'Arial', sans-serif;
+letter-spacing: 1px;
+font-weight: 10;
+font-size: 1rem;
+
+}
 
 
 
@@ -144,77 +151,156 @@ h1 span:hover{
 /*PROJECTS SECTION*/
 .projects-section{
 	height: 100%;
+	overflow: scroll;
 	width: 100%;
-	position: absolute;
 }
+
 .projects-section h1{
 	text-align: center;
 	font-family: 'Oswald', sans-serif;
-	font-size: 3rem;
-	margin: 10px;
+	font-size: 1.5rem;
 }
+.project-text h1{
+	text-align: left;
+}
+
+.projects-section img{
+	width: 98%;
+	height: 90%;
+	background-size: cover;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.project-image-container{
+	height: 500px;
+	width: 600px;
+	max-width: 800px;
+	background-size: cover;
+	float: right;
+	margin-top: 30px;
+	margin-right: 40px;
+	filter: drop-shadow(-3px 5px 5px #4444dd); 
+	background-color: #ededed;
+}
+
 .project-container{
 	margin-top: 50px; 
-	width: 80%;
-	height: 60%;
-	background: url("./images/maze_solver");
+	/*background-color: red;*/
+	height: 85%;
+	width: 85%;
 	position: relative;
 	left: 50%;
 	transform: translate(-50%, 0);
-	border-radius: 5px;
-}
-.project-overlay{
-	height: 0;
-	width: 100%;
-	background-color: #5c17ff;
-	color: white;
-	transition: 0.3s ease all;
-	opacity: 0;
-	border-radius: 5px;
-
-}
-.project-container:hover .project-overlay{
-	height: 100%;
-	opacity: 1;
+	font-size: 1.2rem;
 }
 
-.project-overlay a{
-	font-size: 1.5rem;
-	color: white;
+
+.project-text{
+	display: inline-block;
+	/*background-color: red;*/
+	width: 30%;
+
+}
+.project-text a{
+	font-size: 1rem;
+	color: purple;
 	text-decoration: none;
-	border: 3px solid white;
+	background: none;
+	border: 2px solid purple;
 	border-radius: 3px;
 	padding: 5px 20px ;
 	transition: 0.3s ease all;
+	position: relative;
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
-	position: absolute;
 	z-index: 1;
-	left: 50%;
-	transform: translate(-50%, 0);
-}
-
-.project-overlay a:hover{
-	color: purple;
 
 }
-
-.overlay-3{
-	position: absolute;
-	background-color: white;
-	width: 0;
-	height: 100%;
-	top: 0;
-	left: 0;
-	transition: 0.3s ease all;
-	z-index: -1;
+.project-text a:hover{
+	color: white;
 }
-.project-overlay a:hover .overlay-3{
+
+.project-text a:hover .overlay{
 	width: 100%;
 }
 
+@media only screen and (max-width: 1100px) {
+	.project-container{
+		margin-top: 100px; 
+	}
+	.project-text {
+		display: block;
+		/*text-align: left;*/
+		left: 50%;
+		position: relative;
+		transform: translate(-50%, 0);
+		width: 80%;
 
+	}
+
+	.project-text a{
+		position: relative;
+		text-align: center;
+
+	}
+
+	.project-image-container{
+		width: 600px;
+		height: 330px;
+		float: none;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%, 0);
+
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.project-container{
+		width: 90%;
+		height: 95%;
+	}
+	.project-text {
+		width: 100%;
+
+	}
+
+
+	.project-image-container{
+		width: 600px;
+		height: 330px;
+
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.project-container{
+		width: 97%;
+		height: 95%;
+	}
+
+	.project-container h1{
+		text-align: center;
+	}
+
+	.project-image-container{
+		width: 480px;
+		height: 330px;
+
+	}
+}
 
 /*END OF PROJECTS SECTIONS*/
+
+/*CONTACTS SECTION*/
+.contact-section{
+	width: 100%;
+	height: 100%;
+	background-color: purple;
+	position: absolute;
+}
+/*END OF CONTACTS SECTION*/
 
 
