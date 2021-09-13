@@ -5,8 +5,10 @@ html, body {
 }
 
  h1{
-	font-size: 2rem;
+	font-size: 2.5rem;
 	font-family: 'Oswald', sans-serif;
+	white-space: nowrap;
+
 }
 
 h1 span{
@@ -15,6 +17,7 @@ h1 span{
 	padding: 10px;
 	bottom: 0px;
 	position: relative;
+
 }
 h1 span:hover{
 	color: purple;
@@ -28,6 +31,12 @@ font-weight: 10;
 font-size: 1rem;
 
 }
+
+
+
+
+
+
 
 
 
@@ -74,7 +83,115 @@ font-size: 1rem;
 .intro-section-container a:hover .overlay{
 	width: 100%;
 }
+
+.left-arrow{
+	width: 15px;
+	height: 2.5px;
+	background-color: white;
+	transform: rotate(-45deg);
+	/*padding-right: 50px;*/
+	position: absolute;
+	left: -10px;
+
+}
+.right-arrow{
+	width: 15px;
+	height: 2.5px;
+	background-color: white;
+	transform: rotate(45deg);
+	left: 10px;
+}
+
+
+
+
+@media only screen and (max-width: 800px){
+	.intro-section h1{
+		font-size: 2rem;
+	}
+	.intro-section-container{
+		left: 15%;
+	}
+}
+@media only screen and (max-width: 550px){
+	.intro-section h1{
+		font-size: 1.8rem;
+	}
+	.intro-section-container{
+		left: 15%;
+	}
+	#name{
+	color: purple;
+	}
+	.intro-section a{
+		display: none;
+	}
+
+	#intro-arrow-left{
+	background-color: black;
+	position: absolute;
+	top: 90%;
+	left: 52%;
+}
+
+#intro-arrow-right{
+	background-color: black;
+	position: absolute;
+	top: 90%;
+	left: 50%;
+}
+}
+
+@media only screen and (max-width: 450px){
+	.intro-section h1{
+		font-size: 1.4rem;
+	}
+	.intro-section-container{
+		left: 18%;
+	}
+
+
+	#intro-arrow-left{
+	background-color: black;
+	position: absolute;
+	top: 90%;
+	left: 51%;
+}
+
+	#intro-arrow-right{
+	left: 48.5%;
+}
+
+
+}
+
+@media only screen and (max-width: 350px){
+	.intro-section h1{
+		font-size: 1.2rem;
+	}
+	.intro-section-container{
+		left: 18%;
+	}
+
+
+	#intro-arrow-left{
+	background-color: black;
+	position: absolute;
+	top: 90%;
+	left: 51%;
+}
+	#intro-arrow-right{
+	left: 48%;
+}
+
+}
 /*END OF INTRO SECTION*/
+
+
+
+
+
+
 
 
 
@@ -85,10 +202,11 @@ font-size: 1rem;
 .about-section {
 	height: 100%;
 	width: 100%;
-	background-color: #5c17ff;
+	background-image: linear-gradient(90deg, #a4508b 0%, #5f0a87 80%);
 	color: white;
 	overflow: hidden;
 	position: relative;
+	overflow: scroll;
 }
 
 .about-section h1{
@@ -96,11 +214,17 @@ font-size: 1rem;
 	font-family: 'Oswald', sans-serif;
 	font-size: 3rem;
 	margin: 10px;
+	/*display: inline;*/
 }
-
+.about-section-text{
+	width: 50%;
+	/*background-color: red;*/
+	left: 45%;
+	position: absolute;
+}
 .about-section p{
-	text-align: center;
-	font-size: 1.5rem;
+	text-align: left;
+	font-size: 1rem;
 }
 
 .about-section a{
@@ -112,11 +236,11 @@ font-size: 1rem;
 	border-radius: 3px;
 	padding: 5px 20px ;
 	transition: 0.3s ease all;
-	position: absolute;
+	position: relative;
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
 	z-index: 1;
-	left: 50%;
+	/*left: 40%;*/
 	transform: translate(-50%, 0);
 }
 
@@ -142,7 +266,103 @@ font-size: 1rem;
 	position: absolute;
 	bottom: -10%;
 }
+.about-section img{
+	position: relative;
+	margin-top: 100px;
+	margin-left: 40px;
+	width: 400px;
+	position: absolute;
+	/*float: left;*/
+}
+
+@media only screen and (max-width: 1100px){
+	.about-section-text p{
+		font-size: 1.2rem;
+
+	}
+	.about-section-text{
+		width: 50%;
+		margin-left: 45px;
+	}
+}
+
+@media only screen and (max-width: 950px){
+	.about-section-text p{
+		font-size: 1rem;
+
+	}
+	.about-section-text{
+		width: 35%;
+		margin-left: 120px;
+	}
+}
+
+@media only screen and (max-width: 760px){
+	.about-section-text p{
+		font-size: 1rem;
+
+	}
+	.about-section-text{
+		width: 40%;
+		margin-left: 70px;
+	}
+	.about-section img{
+		width: 300px;
+		margin-top: 140px;
+	}
+}
+
+@media only screen and (max-width: 650px){
+	.about-section-text p{
+		font-size: 1.5rem;
+		text-align: center;
+
+	}
+	.about-section-text{
+		width: 90%;
+		position: relative;
+		left: 0;
+		margin-left: 15px;
+		text-align: center;
+	}
+	.about-section img{
+		display: none;
+	}
+	svg{
+		top: 85%;
+	}
+}
+
+@media only screen and (max-width: 400px){
+	.about-section-text p{
+		font-size: 1.1rem;
+		text-align: center;
+
+	}
+	.about-section-text{
+		width: 90%;
+		position: relative;
+		left: 0;
+		margin-left: 15px;
+		text-align: center;
+	}
+	.about-section img{
+		display: none;
+	}
+	svg{
+		top: 90%;
+	}
+}
+
+
 /*END OF ABOUT SECTION*/
+
+
+
+
+
+
+
 
 
 
@@ -294,13 +514,212 @@ font-size: 1rem;
 
 /*END OF PROJECTS SECTIONS*/
 
+
+
+
+
+
+
+
+
+
+
 /*CONTACTS SECTION*/
 .contact-section{
 	width: 100%;
 	height: 100%;
-	background-color: purple;
+	/*background-color: #a4508b;*/
+background-image: linear-gradient(90deg, #a4508b 0%, #5f0a87 74%);
+
+
+
+
+color: white;
+
+	position: relative;
+
+}
+.contact-items{
+	display: flex;
+	/*background-color: red;*/
+	width: 95%;
+	max-width: 800px;
+	height: 150px;
+	position: relative;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+}
+.contact-items h2{
+	font-size: 1.3rem;
+}
+.contact-items p{
+	font-size: 0.7rem;
+}
+
+.contact-items  div{
+	box-shadow: 0px 0px 5px #000000;
+	/*background-color: #f1f1f1;*/
+  	width: 100%;
+  	margin: 10px;
+}
+.contact-items div img{
+	position: relative;
+	margin-top: 10px;
+}
+
+.contact-items p,h2{
+	margin: 3px;
+	padding: 0;
+}
+.contact-section h1{
 	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+#copyright {
+	position: absolute;
+	top:94%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 0.6rem;
+	color: white;
+	border-top: 1px solid white;
+	padding-top: 15px;
+}
+
+@media only screen and (max-width: 750px){
+	.contact-items{
+		flex-wrap: wrap;
+		width: 80%;
+		top: 30%;
+	}
+	.contact-items > *{
+        flex: 1 1 180px;
+    
+	}
+
+	.contact-section h1{
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 450px){
+	.contact-items{
+		flex-direction: row;
+		width: 50%;
+		top: 25%;
+	}
+	.contact-items > *{
+        flex: none;
+    
+	}
+}
+
+@media only screen and (max-width: 400px){
+.contact-items{
+	width: 50%;
+	top: 25%;
+}
+.contact-section{
+	height: 130%;
+}
+
 }
 /*END OF CONTACTS SECTION*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER SECTION*/
+.footer{
+	height: 30%;
+	width: 100%;
+	background-color: #333333;
+	position: relative;
+	top: 50%;
+
+}
+.left-arrow{
+	width: 15px;
+	height: 2.5px;
+	background-color: white;
+	transform: rotate(-45deg);
+	/*padding-right: 50px;*/
+	position: absolute;
+	left: -10px;
+
+}
+.right-arrow{
+	width: 15px;
+	height: 2.5px;
+	background-color: white;
+	transform: rotate(45deg);
+	left: 10px;
+}
+
+.footer h1{
+	margin-top: 40px;
+	transition: 0.3s ease all; 
+}
+.footer h1:hover{
+	margin-top: 35px;
+}
+
+.footer-images{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 90%;
+	max-width: 300px;
+	transform: translate(-50%, -50%);
+}
+.footer img{
+	width: 30px;
+	height: 30px;
+	margin: 0 20px;
+
+}
+
+@media only screen and (max-width: 650px){
+	.footer{
+		height: 30%;
+		top: 50%;
+	}
+
+	#copyright{
+		white-space: nowrap;
+	}
+}
+
+@media only screen and (max-width: 450px){
+	.footer{
+		height: 20%;
+		top: 75%;
+	}
+
+	#copyright{
+		top: 110%;
+	}
+}
+
+@media only screen and (max-width: 400px){
+	.footer-images img{
+		width: 20px;
+		height: 20px;
+	}
+}
+/*END OF FOOTER SECTION*/
 
 
