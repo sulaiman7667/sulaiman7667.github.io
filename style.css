@@ -46,6 +46,9 @@ font-size: 1rem;
 	height: 100%;
 	width: 100%;
 }
+.intro-section h1{
+	font-size: 2.7rem;
+}
 .intro-section-container{
 	position: absolute;
 	top: 50%;
@@ -53,23 +56,8 @@ font-size: 1rem;
 	transform: translate(0, -50%);
 }
 
-.intro-section-container a{
-	font-size: 1.5rem;
-	color: purple;
-	text-decoration: none;
-	border: 3px solid purple;
-	border-radius: 3px;
-	padding: 5px 20px ;
-	transition: 0.3s ease all;
-	position: relative;
-	text-transform: uppercase;
-	font-family: 'Oswald', sans-serif;
-}
 
-.intro-section-container a:hover{
-	color: white;
 
-}
 .overlay{
 	position: absolute;
 	background-color: purple;
@@ -84,23 +72,41 @@ font-size: 1rem;
 	width: 100%;
 }
 
-.left-arrow{
+.intro-left-arrow{
 	width: 15px;
 	height: 2.5px;
-	background-color: white;
+	background-color: black;
+	transform: rotate(45deg);
+	/*padding-right: 50px;*/
+	position: absolute;
+	left: 49%;
+	top: 90%;
+	/*transform: translate(-50%, 0);*/
+	margin-top: 20px;
+	margin-left: -5px;
+	/*left: -10px;*/
+
+}
+
+.intro-right-arrow{
+	width: 15px;
+	height: 2.5px;
+	background-color: black;
 	transform: rotate(-45deg);
 	/*padding-right: 50px;*/
 	position: absolute;
-	left: -10px;
+	left: 49%;
+	top: 90%;
+	/*transform: translate(-50%, 0);*/
+	margin-top: 20px;
+	margin-left: 5px;
+	/*left: -10px;*/
 
 }
-.right-arrow{
-	width: 15px;
-	height: 2.5px;
-	background-color: white;
-	transform: rotate(45deg);
-	left: 10px;
-}
+
+#name{
+	color: purple;
+	}
 
 
 
@@ -120,26 +126,11 @@ font-size: 1rem;
 	.intro-section-container{
 		left: 15%;
 	}
-	#name{
-	color: purple;
-	}
 	.intro-section a{
 		display: none;
 	}
 
-	#intro-arrow-left{
-	background-color: black;
-	position: absolute;
-	top: 90%;
-	left: 52%;
-}
 
-#intro-arrow-right{
-	background-color: black;
-	position: absolute;
-	top: 90%;
-	left: 50%;
-}
 }
 
 @media only screen and (max-width: 450px){
@@ -151,16 +142,6 @@ font-size: 1rem;
 	}
 
 
-	#intro-arrow-left{
-	background-color: black;
-	position: absolute;
-	top: 90%;
-	left: 51%;
-}
-
-	#intro-arrow-right{
-	left: 48.5%;
-}
 
 
 }
@@ -213,6 +194,10 @@ font-size: 1rem;
 	font-family: 'Oswald', sans-serif;
 	font-size: 3rem;
 	margin: 10px;
+}
+
+.about-section h1 span:hover{
+	color: white;
 }
 .about-section-flex{
 	display: flex;
@@ -276,13 +261,14 @@ font-size: 1rem;
 @media only screen and (max-width: 900px){
 	.about-section-flex{
 		flex-direction: column;
-		width: 70%;
+		width: 80%;
 		position: relative;
 		left: 50%;
 		transform: translate(-50%, 0);
 		margin-top: 30px;
 	}
 	.about-section-text{
+		/*text-align: justify all;*/
 		width: 100%;
 	}
 	.about-section img{
@@ -297,6 +283,12 @@ font-size: 1rem;
 		/*margin-bottom: 100px;*/
 	}
 
+}
+
+@media only screen and (max-width: 500px){
+	.about-section-flex{
+		width: 90%;
+	}
 }
 
 
@@ -326,7 +318,7 @@ font-size: 1rem;
 	flex-direction: column;
 	/*background-color: red;*/
 	width: 85%;
-	max-width: 1500px;
+	max-width: 1200px;
 	position: relative;
 	left: 50%;
 	transform: translate(-50%, 0);
@@ -361,6 +353,7 @@ font-size: 1rem;
 .project-item img{
 	box-shadow: -1px 1px 5px #000000;
 	width: 100%;
+	/*height: 100%;*/
 	border-radius: 5px;
 	/*max-width: 500px;*/
 	/*padding-bottom: 100px;*/
@@ -409,7 +402,7 @@ font-size: 1rem;
 		transform: translate(-50%, 0);
 		margin-top: 50px;
 	}
-	p{
+	.project-item p{
 	text-align: justify;
 	}
 	.project-text{
@@ -431,10 +424,160 @@ font-size: 1rem;
 
 }
 
+@media only screen and (max-width: 500px){
+	.project-item{
+		width: 110%;
+	}
+	.project-item{
+		margin-bottom: 40px;
+	}
+}
+
 /*END OF PROJECTS SECTIONS*/
 
 
+/*SKILLS SECTION*/
+.skills-section{
+	background-color: white;
+	background-image: linear-gradient(90deg, #a4508b 0%, #5f0a87 74%);
+	width: 100%;
+	/*height: 500px;*/
+}
+.skills-section h1{
+	text-align: center;
+	color: white;
+	font-size: 2.5rem;
+	padding-top: 20px;
+}
 
+.skills-section h1 span:hover{
+	color: white;
+}
+
+.bar{
+	width: 80%;
+	height: 40px;
+	max-width: 1200px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	margin-bottom: 25px;
+	transition: 1s ease all;
+}
+.bar:hover .bar-item{
+	width: 100%;
+
+}
+
+.bar:hover .remaining-bar-item{
+	width: 0%;
+
+}
+.bar p {
+	position: absolute;
+	color: white;
+	margin: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+	margin-left: 50px;
+	font-size: 0.8rem;
+	letter-spacing: 5px;
+
+}
+.bar-item{
+	height: 100%;
+	/*background-image: linear-gradient(90deg, #a4508b 0%, #5f0a87 74%);*/
+	background-color: purple;
+	border-radius: 2px;
+	display: inline-block;
+	transition: 0.3s ease all;
+	box-shadow: 0px 0px 15px #000000;
+
+}
+
+.remaining-bar-item{
+	height: 1px;
+	background-color: grey;
+	position: absolute;
+	display: inline-block;
+	margin-left: 10px;
+	top: 50%;
+	transform: translate(0,-50%);
+	transition: 0.3s ease all;
+
+}
+.percentage{
+	color: white;
+	font-size: 0.8rem;
+	z-index: 1;
+	position: absolute;
+	display: inline-block;
+	top: 50%;
+	left: 100%;
+	transform: translate(0, -50%);
+	margin: 0;
+	margin-left: 20px;
+}
+
+.python-bar{
+	width: 90%;
+}
+.python-remaining-bar{
+	width: 10%;
+}
+
+.java-bar{
+	width: 70%;
+}
+
+.java-remaining-bar{
+	width: 30%;
+}
+
+.html-bar{
+	width: 80%;
+}
+
+.html-remaining-bar{
+	width: 20%;
+}
+
+.css-bar{
+	width: 80%;
+}
+
+.css-remaining-bar{
+	width: 20%;
+}
+
+.php-bar{
+	width: 50%;
+}
+
+.php-remaining-bar{
+	width: 50%;
+}
+
+.sql-bar{
+	width: 50%;
+}
+
+.sql-remaining-bar{
+	width: 50%;
+}
+@media only screen and (max-width: 500px){
+	.bar{
+		width: 80%;
+		margin-left: -15px;
+	}
+	.skills-section h1{
+		font-size: 2rem;
+	}
+}
+
+
+
+/*END OF SKILLS SECTION*/
 
 
 
@@ -446,30 +589,31 @@ font-size: 1rem;
 /*CONTACTS SECTION*/
 .contact-section{
 	width: 100%;
-	height: 100%;
-	/*background-color: #a4508b;*/
-background-image: linear-gradient(90deg, #a4508b 0%, #5f0a87 74%);
-
-
-
-
-color: white;
-
+	/*height: 300px;*/
+	background-color: white;
+	/*background-image: linear-gradient(90deg, #a4508b 0%, #5f0a87 74%);*/
+	color: black;
 	position: relative;
 
 }
 .contact-items{
 	display: flex;
 	/*background-color: red;*/
+	/*flex-direction: column;*/
 	width: 95%;
-	max-width: 800px;
-	height: 150px;
+	max-width: 1000px;
 	position: relative;
-	top: 40%;
+	/*background-color: red;*/
+	/*top: 40%;*/
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, 0);
 	text-align: center;
+	padding-bottom: 50px;
 
+}
+.contact-section h1{
+	position: relative;
+	margin-top: -80px;
 }
 .contact-items h2{
 	font-size: 1.3rem;
@@ -494,58 +638,29 @@ color: white;
 	padding: 0;
 }
 .contact-section h1{
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0);
+	position: relative;
+	text-align: center;
 }
-#copyright {
-	position: absolute;
-	top:94%;
-	left: 50%;
-	transform: translate(-50%, 0);
-	font-size: 0.6rem;
-	color: white;
-	border-top: 1px solid white;
-	padding-top: 15px;
+.contact-items a{
+	text-decoration: none;
 }
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 650px){
 	.contact-items{
-		flex-wrap: wrap;
-		width: 80%;
-		top: 30%;
+		flex-direction: column;
+		width: 60%;
 	}
-	.contact-items > *{
-        flex: 1 1 180px;
-    
+	.contact-section h1{
+	position: relative;
+	margin-top: -40px;
 	}
+}
+
+@media only screen and (max-width: 500px){
 
 	.contact-section h1{
-		font-size: 1.5rem;
+	margin-top: -10px;
 	}
-}
-
-@media only screen and (max-width: 450px){
-	.contact-items{
-		flex-direction: row;
-		width: 50%;
-		top: 25%;
-	}
-	.contact-items > *{
-        flex: none;
-    
-	}
-}
-
-@media only screen and (max-width: 400px){
-.contact-items{
-	width: 50%;
-	top: 25%;
-}
-.contact-section{
-	height: 130%;
-}
-
 }
 /*END OF CONTACTS SECTION*/
 
@@ -562,12 +677,15 @@ color: white;
 
 
 /*FOOTER SECTION*/
+.footer-section{
+	height: 150px;
+}
 .footer{
-	height: 30%;
+	height: 100%;
 	width: 100%;
 	background-color: #333333;
 	position: relative;
-	top: 50%;
+	/*top: 50%;*/
 
 }
 .left-arrow{
@@ -577,7 +695,11 @@ color: white;
 	transform: rotate(-45deg);
 	/*padding-right: 50px;*/
 	position: absolute;
-	left: -10px;
+	left: 49%;
+	/*transform: translate(-50%, 0);*/
+	margin-top: 20px;
+	margin-left: -5px;
+	/*left: -10px;*/
 
 }
 .right-arrow{
@@ -585,7 +707,12 @@ color: white;
 	height: 2.5px;
 	background-color: white;
 	transform: rotate(45deg);
-	left: 10px;
+	position: absolute;
+	left: 49%;
+	/*transform: translate(-50%, 0);*/
+	margin-top: 20px;
+	margin-left: 5px;
+	/*left: 10px;*/
 }
 
 .footer h1{
@@ -595,50 +722,61 @@ color: white;
 .footer h1:hover{
 	margin-top: 35px;
 }
+.footer p{
+	white-space: nowrap;
+}
 
 .footer-images{
 	position: absolute;
+	display: flex;
+	justify-content: space-around;
 	left: 50%;
 	top: 50%;
 	width: 90%;
 	max-width: 300px;
 	transform: translate(-50%, -50%);
+	/*background-color: red;*/
 }
 .footer img{
 	width: 30px;
 	height: 30px;
-	margin: 0 20px;
+	/*margin: 0 20px;*/
+	/*background-color: blue;*/
 
 }
 
-@media only screen and (max-width: 650px){
-	.footer{
-		height: 30%;
-		top: 50%;
-	}
-
-	#copyright{
-		white-space: nowrap;
-	}
+#copyright {
+	position: absolute;
+	top:70%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 0.6rem;
+	color: grey;
+	border-top: 1px solid grey;
+	padding-top: 15px;
 }
 
-@media only screen and (max-width: 450px){
-	.footer{
-		height: 20%;
-		top: 75%;
-	}
-
-	#copyright{
-		top: 110%;
-	}
-}
-
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 500px){
 	.footer-images img{
 		width: 20px;
 		height: 20px;
 	}
+
+	.left-arrow{
+	width: 12px;
+	height: 2px;
+	margin-left: -4px;
+
 }
+.right-arrow{
+	width: 12px;
+	height: 2px;
+	margin-left: 4px;
+}
+
+
+}
+
 /*END OF FOOTER SECTION*/
 
 
