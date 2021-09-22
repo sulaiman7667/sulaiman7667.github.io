@@ -37,7 +37,7 @@ font-size: 1rem;
 }
 
 .animation-transition{
-	transition: 1s ease all;
+	transition: 2s ease all;
 }
 
 @keyframes intro-animation {
