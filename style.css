@@ -29,6 +29,8 @@ p{
 font-family: Montserrat,sans-serif;
 font-weight: 100;
 font-size: 1rem;
+color: #3d3d3d;
+line-height: 25px;
 
 }
 .opacify{
@@ -208,6 +210,7 @@ font-size: 1rem;
 }
 .about-section p {
 	font-size: 1.3rem;
+	color: white;
 }
 .about-section h1{
 	text-align: center;
@@ -387,11 +390,12 @@ font-size: 1rem;
 	text-decoration: none;
 	border: 3px solid purple;
 	border-radius: 3px;
-	padding: 5px 20px ;
+	padding: 3px 20px ;
 	transition: 0.3s ease all;
 	position: relative;
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
+	/*box-shadow: 0px 0px 2px #000000;*/
 }
 
 .project-item a:hover{
@@ -664,6 +668,7 @@ font-size: 1rem;
 }
 .contact-items p{
 	font-size: 0.7rem;
+	line-height: normal;
 }
 
 .contact-items  div{
