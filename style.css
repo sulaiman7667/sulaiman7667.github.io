@@ -310,7 +310,11 @@ line-height: 25px;
 
 @media only screen and (max-width: 500px){
 	.about-section-flex{
-		width: 97%;
+		width: 80%;
+	}
+
+	.about-section p{
+		text-align: left;
 	}
 
 }
@@ -465,7 +469,7 @@ line-height: 25px;
 
 @media only screen and (max-width: 500px){
 	.project-item{
-		width: 110%;
+		width: 100%;
 	}
 	.project-item{
 		margin-bottom: 40px;
@@ -614,6 +618,7 @@ line-height: 25px;
 	.bar{
 		width: 80%;
 		margin-left: -15px;
+		height: 30px;
 	}
 	.skills-section h1{
 		font-size: 2rem;
