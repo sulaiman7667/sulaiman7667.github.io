@@ -43,10 +43,12 @@ lol()
 
 function scrollFunction(a) {
   let content = document.querySelector('.opacify')
-  let contentPosition = content.getBoundingClientRect().top;
-  let screenPosition = window.innerHeight
-  if(contentPosition < screenPosition){
-    content.classList.remove('opacify')
+  if(content!=null){
+    let contentPosition = content.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight
+    if(contentPosition < screenPosition){
+     content.classList.remove('opacify')
+    }
   }
 }
 
