@@ -61,6 +61,9 @@ function handleMove_1(e) {
   document.getElementById("img3").style.transitionDuration = "0s";
   const yRotation = -20 * ((xVal - width_1 / 2) / width_1)
   const xRotation = -20 * ((yVal - height_1 / 2) / height_1)
+  console.log(yVal)
+  console.log(height_1)
+  console.log(xRotation)
 
 
   const string = 'perspective(900px) scale(1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
