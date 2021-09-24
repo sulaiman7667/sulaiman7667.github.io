@@ -66,10 +66,10 @@ function handleMove_1(e) {
   el_1.style.transform = string
 }
 
-function handleMove_2(e) {
+function handleMove_2(p) {
 
-  const xVal = -(e.layerX)
-  const yVal = e.layerY
+  const xVal = -(p.layerX)
+  const yVal = p.layerY
   document.getElementById("img1").style.transitionDuration = "0s";
   document.getElementById("img2").style.transitionDuration = "0s";
   document.getElementById("img3").style.transitionDuration = "0s";
@@ -82,10 +82,10 @@ function handleMove_2(e) {
   el_2.style.transform = string
 }
 
-function handleMove_3(e) {
+function handleMove_3(m) {
 
-  const xVal = -(e.layerX)
-  const yVal = e.layerY
+  const xVal = -(m.layerX)
+  const yVal = m.layerY
   document.getElementById("img1").style.transitionDuration = "0s";
   document.getElementById("img2").style.transitionDuration = "0s";
   document.getElementById("img3").style.transitionDuration = "0s";
