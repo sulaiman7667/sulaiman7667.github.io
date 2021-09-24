@@ -1,16 +1,38 @@
+var height_1 = 0
+var width_1 = 0
+
+var height_2 = 0
+var width_2 = 0
+
+var height_3 = 0
+var width_3 = 0
+
+// setTimeout(function(){
+//     height_1 = el_1.clientHeight
+//     width_1 = el_1.clientWidth
+
+//     height_2 = el_2.clientHeight
+//     width_2 = el_2.clientWidth
+
+//     height_3 = el_3.clientHeight
+//     width_3 = el_3.clientWidth
+// },3000)
+function funny(){
+  height_1 = el_1.clientHeight
+    width_1 = el_1.clientWidth
+
+    height_2 = el_2.clientHeight
+    width_2 = el_2.clientWidth
+
+    height_3 = el_3.clientHeight
+    width_3 = el_3.clientWidth
+}
+window.onload = funny
 
 let el_1 = document.getElementById('img1')
 let el_2 = document.getElementById('img2')
 let el_3 = document.getElementById('img3')
 
-const height_1 = el_1.clientHeight
-const width_1 = el_1.clientWidth
-
-const height_2 = el_2.clientHeight
-const width_2 = el_2.clientWidth
-
-const height_3 = el_3.clientHeight
-const width_3 = el_3.clientWidth
 
 el_1.addEventListener('mousemove', handleMove_1)
 el_2.addEventListener('mousemove', handleMove_2)
