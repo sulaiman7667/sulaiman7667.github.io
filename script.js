@@ -7,16 +7,6 @@ var width_2 = 0
 var height_3 = 0
 var width_3 = 0
 
-// setTimeout(function(){
-//     height_1 = el_1.clientHeight
-//     width_1 = el_1.clientWidth
-
-//     height_2 = el_2.clientHeight
-//     width_2 = el_2.clientWidth
-
-//     height_3 = el_3.clientHeight
-//     width_3 = el_3.clientWidth
-// },3000)
 function funny(){
   height_1 = el_1.clientHeight
     width_1 = el_1.clientWidth
@@ -83,9 +73,6 @@ function handleMove_1(e) {
   document.getElementById("img3").style.transitionDuration = "0s";
   const yRotation = -20 * ((xVal - width_1 / 2) / width_1)
   const xRotation = -20 * ((yVal - height_1 / 2) / height_1)
-  console.log(yVal)
-  console.log(height_1)
-  console.log(xRotation)
 
 
   const string = 'perspective(900px) scale(1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
