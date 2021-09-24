@@ -66,7 +66,7 @@ function handleMove_1(e) {
   el_1.style.transform = string
 }
 
-function handleMove_2(m) {
+function handleMove_2(e) {
 
   const xVal = -(e.layerX)
   const yVal = e.layerY
@@ -82,7 +82,7 @@ function handleMove_2(m) {
   el_2.style.transform = string
 }
 
-function handleMove_3(p) {
+function handleMove_3(e) {
 
   const xVal = -(e.layerX)
   const yVal = e.layerY
