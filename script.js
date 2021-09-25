@@ -1,24 +1,3 @@
-var height_1 = 0
-var width_1 = 0
-
-var height_2 = 0
-var width_2 = 0
-
-var height_3 = 0
-var width_3 = 0
-
-function funny(){
-  height_1 = el_1.clientHeight
-    width_1 = el_1.clientWidth
-
-    height_2 = el_2.clientHeight
-    width_2 = el_2.clientWidth
-
-    height_3 = el_3.clientHeight
-    width_3 = el_3.clientWidth
-}
-window.onload = funny
-
 let el_1 = document.getElementById('img1')
 let el_2 = document.getElementById('img2')
 let el_3 = document.getElementById('img3')
@@ -65,7 +44,8 @@ function scrollFunction(a) {
 }
 
 function handleMove_1(e) {
-
+  var height_1 = el_1.clientHeight
+  var width_1 = el_1.clientWidth
   const xVal = -(e.layerX)
   const yVal = e.layerY
   document.getElementById("img1").style.transitionDuration = "0s";
@@ -81,7 +61,8 @@ function handleMove_1(e) {
 }
 
 function handleMove_2(p) {
-
+  var height_2 = el_2.clientHeight
+  var width_2 = el_2.clientWidth
   const xVal = -(p.layerX)
   const yVal = p.layerY
   document.getElementById("img1").style.transitionDuration = "0s";
@@ -97,7 +78,8 @@ function handleMove_2(p) {
 }
 
 function handleMove_3(m) {
-
+  var height_3 = el_3.clientHeight
+  var width_3 = el_3.clientWidth
   const xVal = -(m.layerX)
   const yVal = m.layerY
   document.getElementById("img1").style.transitionDuration = "0s";
